@@ -1,43 +1,78 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
 }
 .nav-link {
-  margin: 5px;
+  margin-left: 90px;
   list-style-type: none;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 header {
+  background-color: #c7c7c7;
   display: flex;
   width: 100%;
-  margin: auto;
 }
-
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
 .logo-container {
   flex: 1;
+  padding: 10px 0;
+  padding-left: 5px
   }
+
 .logo-container a:hover {
   opacity: .5;
 }
+
 nav a {
   flex: 1;
   color: black;
   text-decoration: none;
-  text-align: center;
+  text-transform: uppercase;
 }
+
 nav a:hover {
-  color: rgba(255, 112, 112, .5);
+  color: #7a7a7a;
+}
+
+nav li {
+  display: inline-block;
+  padding-top: 18px;
+  position: relative;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
 }
 
 .insta {
   flex: 1;
   text-align: right;
+  padding: 10px 0;
+  padding-right: 5px;
 }
+
 .insta a:hover {
   opacity: .5;
 }
@@ -50,21 +85,22 @@ nav a:hover {
   text-decoration: none;
   list-style-type: none;
 }
+
 .column img {
   width: 15%;
   transition: opacity .25s;
   text-decoration: none;
   list-style-type: none;
 }
+
 .column img:hover {
   opacity: .5;
 }
 
-
 .footer {
-  display: block;
+  flex: 1;
   color: black;
-  margin: -5px;
+  margin: auto;
   text-align: center;
   text-decoration: none;
   list-style-type: none;
